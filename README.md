@@ -10,7 +10,7 @@ A calm, modern, native Pomodoro & desk-break companion for **macOS** and **Windo
 - **Native macOS (`macos/`)**:
   - Swift 6 + SwiftUI + AppKit (`NSStatusItem` animated pet + countdown, `NSPopover`, multi-screen translucent `NSPanel` break overlay, `UNUserNotificationCenter`, `LSUIElement = true`).
 - **Native Windows (`windows/`)**:
-  - C# / .NET 8 / WinUI 3 (`MicaBackdrop` main app, Win32 `Shell_NotifyIcon` animated tray pet, `ITaskbarList3` live taskbar progress bar, docked always-on-top Acrylic floating mini-pill, full-screen Acrylic break overlay, `pomopet://` URI handler).
+  - C# / .NET 11 / WinUI 3 (Windows App SDK 2.7) — `MicaBackdrop` main app, Win32 `Shell_NotifyIcon` animated tray pet, `ITaskbarList3` live taskbar progress bar, docked always-on-top Acrylic floating mini-pill, full-screen Acrylic break overlay, `pomopet://` URI handler.
   - **PowerToys Command Palette Companion (`PomoPet.PowerToys`)**: Connects via Named Pipe (`PomoPet.IPC.v1`) with `pomopet://` fallback to query live status and trigger Pomodoro/pet actions from PowerToys.
 
 ---
@@ -34,7 +34,7 @@ open dist/PomoPet.app
 
 > Tip: Click **Preview Break** inside the popover to immediately try out the animated full-screen breathing & stretch overlay!
 
-### Windows (Windows 10/11, .NET 8 SDK + Windows App SDK)
+### Windows (Windows 10/11, .NET 11 SDK + Windows App SDK 2.7)
 
 ```powershell
 # Run core & URI protocol unit tests

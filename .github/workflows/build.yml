@@ -9,7 +9,7 @@ jobs:
   macos:
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run macOS Core Self-Test
         working-directory: macos
         run: swift run PomoPetSelfTest
@@ -23,10 +23,10 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "11.0.x"
       - name: Run Windows Core Unit Tests
         run: dotnet test windows/tests/PomoPet.Core.Tests/PomoPet.Core.Tests.csproj -c Release
       - name: Build Windows WinUI 3 App & PowerToys Extension

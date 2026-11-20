@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Release tag (e.g. v1.0.0)"
+        description: "Release tag (e.g. v1.1.0)"
         required: true
-        default: "v1.0.0"
+        default: "v1.1.0"
 
 permissions:
   contents: write
@@ -18,7 +18,7 @@ jobs:
   release-macos:
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run macOS Self-Test
         working-directory: macos
         run: swift run PomoPetSelfTest
@@ -39,10 +39,10 @@ jobs:
   release-windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "11.0.x"
       - name: Run Windows Core Unit Tests
         run: dotnet test windows/tests/PomoPet.Core.Tests/PomoPet.Core.Tests.csproj -c Release
       - name: Publish Windows WinUI 3 App & PowerToys Companion
