@@ -1,0 +1,60 @@
+name: Release PomoPet
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v1.0.0)"
+        required: true
+        default: "v1.0.0"
+
+permissions:
+  contents: write
+
+jobs:
+  release-macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run macOS Self-Test
+        working-directory: macos
+        run: swift run PomoPetSelfTest
+      - name: Build & Package PomoPet.app
+        working-directory: macos
+        run: |
+          chmod +x scripts/bundle-macos.sh
+          ./scripts/bundle-macos.sh
+          cd dist
+          ditto -c -k --sequesterRsrc --keepParent PomoPet.app PomoPet-macOS-arm64.zip
+      - name: Upload macOS Release Asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG_NAME: ${{ inputs.tag || github.ref_name }}
+        run: |
+          gh release upload "$TAG_NAME" macos/dist/PomoPet-macOS-arm64.zip --clobber
+
+  release-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Run Windows Core Unit Tests
+        run: dotnet test windows/tests/PomoPet.Core.Tests/PomoPet.Core.Tests.csproj -c Release
+      - name: Publish Windows WinUI 3 App & PowerToys Companion
+        shell: pwsh
+        run: |
+          dotnet publish windows/src/PomoPet.App/PomoPet.App.csproj -c Release -r win-x64 -p:Platform=x64 -o dist/PomoPet-Windows-x64
+          dotnet publish windows/src/PomoPet.PowerToys/PomoPet.PowerToys.csproj -c Release -p:Platform=x64 -o dist/PomoPet-PowerToys-x64
+          Compress-Archive -Path dist/PomoPet-Windows-x64/* -DestinationPath dist/PomoPet-Windows-x64.zip -Force
+          Compress-Archive -Path dist/PomoPet-PowerToys-x64/* -DestinationPath dist/PomoPet-PowerToys-x64.zip -Force
+      - name: Upload Windows Release Assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG_NAME: ${{ inputs.tag || github.ref_name }}
+        run: |
+          gh release upload "$TAG_NAME" dist/PomoPet-Windows-x64.zip dist/PomoPet-PowerToys-x64.zip --clobber

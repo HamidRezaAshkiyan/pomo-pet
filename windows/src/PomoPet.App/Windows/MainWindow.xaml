@@ -1,0 +1,78 @@
+<Window
+    x:Class="PomoPet.App.Windows.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="PomoPet">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="BaseAlt" />
+    </Window.SystemBackdrop>
+
+    <Grid Padding="24" RowSpacing="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Grid Grid.Row="0">
+            <Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    CornerRadius="14" Padding="12,6" HorizontalAlignment="Left">
+                <TextBlock x:Name="PhaseBadgeText" Text="Focus" FontWeight="SemiBold" FontSize="13" />
+            </Border>
+            <TextBlock x:Name="TodayCountText" Text="Today: 0 sessions"
+                       HorizontalAlignment="Right" VerticalAlignment="Center"
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}" FontSize="12" />
+        </Grid>
+
+        <!-- Live Session Preview -->
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+            <Grid Width="190" Height="190">
+                <ProgressRing x:Name="SessionProgressRing"
+                              Width="190" Height="190"
+                              IsIndeterminate="False"
+                              Minimum="0" Maximum="100" Value="0" />
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4">
+                    <Image x:Name="PetImage" Width="72" Height="72" Stretch="Uniform" />
+                    <TextBlock x:Name="TimerText" Text="25:00"
+                               FontSize="34" FontWeight="Bold" HorizontalAlignment="Center" />
+                </StackPanel>
+            </Grid>
+            <TextBlock x:Name="SubtitleText"
+                       Text="Mochi is waiting for your next session"
+                       HorizontalAlignment="Center"
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                       FontSize="13" />
+        </StackPanel>
+
+        <!-- Controls -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+            <Button Content="Reset" Click="Reset_Click" CornerRadius="18" Padding="14,8" />
+            <Button x:Name="StartPauseButton" Content="Start Focus" Click="StartPause_Click"
+                    Style="{StaticResource AccentButtonStyle}" CornerRadius="18" Padding="24,8" />
+            <Button Content="Skip" Click="Skip_Click" CornerRadius="18" Padding="14,8" />
+            <Button Content="Preview Break" Click="PreviewBreak_Click" CornerRadius="18" Padding="14,8" />
+        </StackPanel>
+
+        <!-- Pet Switcher -->
+        <StackPanel Grid.Row="3" Spacing="8">
+            <TextBlock Text="Companion" FontSize="12" FontWeight="SemiBold"
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="Mochi (Cat)" HorizontalAlignment="Stretch"
+                        Click="SelectCat_Click" CornerRadius="10" />
+                <Button Grid.Column="1" Content="Biscuit (Dog)" HorizontalAlignment="Stretch"
+                        Click="SelectDog_Click" CornerRadius="10" />
+                <Button Grid.Column="2" Content="Yuzu (Capybara)" HorizontalAlignment="Stretch"
+                        Click="SelectCapybara_Click" CornerRadius="10" />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

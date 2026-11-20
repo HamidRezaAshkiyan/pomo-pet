@@ -1,0 +1,35 @@
+name: Build & Test PomoPet
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run macOS Core Self-Test
+        working-directory: macos
+        run: swift run PomoPetSelfTest
+      - name: Run macOS XCTest Suite
+        working-directory: macos
+        run: swift test
+      - name: Build & Package PomoPet.app
+        working-directory: macos
+        run: ./scripts/bundle-macos.sh
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Run Windows Core Unit Tests
+        run: dotnet test windows/tests/PomoPet.Core.Tests/PomoPet.Core.Tests.csproj -c Release
+      - name: Build Windows WinUI 3 App & PowerToys Extension
+        run: |
+          dotnet build windows/src/PomoPet.App/PomoPet.App.csproj -c Release -p:Platform=x64
+          dotnet build windows/src/PomoPet.PowerToys/PomoPet.PowerToys.csproj -c Release -p:Platform=x64

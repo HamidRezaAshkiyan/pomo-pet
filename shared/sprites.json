@@ -1,0 +1,553 @@
+{
+  "version": 1,
+  "gridSize": 16,
+  "pets": [
+    {
+      "id": "cat",
+      "displayName": "Mochi",
+      "species": "Cat",
+      "accentHex": "#F4A261",
+      "palette": {
+        ".": "transparent",
+        "o": "#2B2D42",
+        "f": "#F4A261",
+        "d": "#E07A3D",
+        "w": "#FFF8F0",
+        "p": "#F28482",
+        "z": "#8ECAE6",
+        "c": "#A8DADC"
+      },
+      "states": {
+        "idle": {
+          "fps": 1.6,
+          "frames": [
+            [
+              "................",
+              "...oo......oo...",
+              "..ofo......ofo..",
+              "..offoooooooffo.",
+              "..offfffffffffo.",
+              "..ofwofffffwofo.",
+              "..ofofffffofofo.",
+              "..offffppfffffo.",
+              "...offfffffffo..",
+              "....oowwwwooo...",
+              "...offwwwwffo...",
+              "...offwwwwffo.o.",
+              "...offfffffo.fo.",
+              "....oofooofo.o..",
+              "....oo...ooo....",
+              "................"
+            ],
+            [
+              "................",
+              "...oo......oo...",
+              "..ofo......ofo..",
+              "..offoooooooffo.",
+              "..offfffffffffo.",
+              "..offfffffffooo.",
+              "..ooofffffofofo.",
+              "..offffppfffffo.",
+              "...offfffffffo..",
+              "....oowwwwooo...",
+              "...offwwwwffo...",
+              "...offwwwwffo...",
+              "...offfffffooo..",
+              "....oofooofo.fo.",
+              "....oo...oo..o..",
+              "................"
+            ]
+          ]
+        },
+        "focusing": {
+          "fps": 2.6,
+          "frames": [
+            [
+              "................",
+              "...oo......oo...",
+              "..ofo......ofo..",
+              "..offoooooooffo.",
+              "..offfffffffffo.",
+              "..ofofffffofofo.",
+              "..offffppfffffo.",
+              "...offfffffffo..",
+              "....oowwwwooo...",
+              "...offwwwwffo...",
+              "..oofffwwfffoo..",
+              "..o.cccccccc.o..",
+              "....cwwwwwwc....",
+              "....cccccccc....",
+              "................",
+              "................"
+            ],
+            [
+              "................",
+              "................",
+              "...oo......oo...",
+              "..ofo......ofo..",
+              "..offoooooooffo.",
+              "..offfffffffffo.",
+              "..ofofffffofofo.",
+              "..offffppfffffo.",
+              "...offfffffffo..",
+              "...ooowwwwooo...",
+              "..offfwwwwfffo..",
+              "..o.cccccccc.o..",
+              "....cwwccwwc....",
+              "....cccccccc....",
+              "................",
+              "................"
+            ]
+          ]
+        },
+        "stretching": {
+          "fps": 1.8,
+          "frames": [
+            [
+              "................",
+              "..........oo..oo",
+              ".........ofooofo",
+              "........offffffo",
+              "....ooo.ofofofoo",
+              "...offfooffppffo",
+              "..offffffffffffo",
+              ".ooffffffffffoo.",
+              ".o.offffffffo...",
+              "....offfffoo....",
+              "....ofooofo.....",
+              "...ofo...ofo....",
+              "..oo......oo....",
+              "................",
+              "................",
+              "................"
+            ],
+            [
+              "...........p....",
+              "..........oo..oo",
+              ".........ofooofo",
+              ".....oo.offffffo",
+              "...offfoofofofoo",
+              "..offffffofppffo",
+              ".offffffffffffo.",
+              "oo.offffffffoo..",
+              "....offffffo....",
+              ".....ofooofo....",
+              "....ofo...ofo...",
+              "...oo......oo...",
+              "................",
+              "................",
+              "................",
+              "................"
+            ]
+          ]
+        },
+        "napping": {
+          "fps": 1.2,
+          "frames": [
+            [
+              "...........zzz..",
+              "............z...",
+              "...........zzz..",
+              "................",
+              "................",
+              "....oo....oo....",
+              "...ofoooooofo...",
+              "..offffffffffo..",
+              ".offoofffooffoo.",
+              ".offfffppfffffo.",
+              ".offfffffffffoo.",
+              "..oowwwwwwwwoo..",
+              "...oooooooooo...",
+              "................",
+              "................",
+              "................"
+            ],
+            [
+              "..........zzz...",
+              "...........z....",
+              "..........zzz...",
+              ".............z..",
+              "................",
+              "................",
+              "....oo....oo....",
+              "...ofoooooofo...",
+              "..offffffffffo..",
+              ".offoofffooffoo.",
+              ".offfffppfffffo.",
+              ".oofffffffffooo.",
+              "..oowwwwwwwwoo..",
+              "...oooooooooo...",
+              "................",
+              "................"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "dog",
+      "displayName": "Biscuit",
+      "species": "Shiba",
+      "accentHex": "#E9C46A",
+      "palette": {
+        ".": "transparent",
+        "o": "#2B2D42",
+        "f": "#E9B44C",
+        "w": "#FFF8E8",
+        "p": "#F28482",
+        "r": "#E76F51",
+        "z": "#8ECAE6",
+        "c": "#A8DADC"
+      },
+      "states": {
+        "idle": {
+          "fps": 1.8,
+          "frames": [
+            [
+              "................",
+              "..oo........oo..",
+              ".offo......offo.",
+              ".offfoooooofffo.",
+              "..offffffffffo..",
+              "..ofofffffofoo..",
+              "..owwffooffwwo..",
+              "..owwwwwwpwwwo..",
+              "...oowwwwwwoo...",
+              "....orrrrrro....",
+              "...offwwwwffo.o.",
+              "...offwwwwffofo.",
+              "...offffffffoo..",
+              "....oofooofo....",
+              "....oo...oo.....",
+              "................"
+            ],
+            [
+              "................",
+              "..oo........oo..",
+              ".offo......offo.",
+              ".offfoooooofffo.",
+              "..offffffffffo..",
+              "..ofofffffofoo..",
+              "..owwffooffwwo..",
+              "..owwwwwwpwwwo..",
+              "...oowwwwwwoo...",
+              "....orrrrrro..o.",
+              "...offwwwwffofo.",
+              "...offwwwwffoo..",
+              "...offffffffo...",
+              "....oofooofo....",
+              "....oo...oo.....",
+              "................"
+            ]
+          ]
+        },
+        "focusing": {
+          "fps": 2.6,
+          "frames": [
+            [
+              "................",
+              "..oo........oo..",
+              ".offo......offo.",
+              ".offfoooooofffo.",
+              "..offffffffffo..",
+              "..ofofffffofoo..",
+              "..owwffooffwwo..",
+              "...oowwwwwwoo...",
+              "....orrrrrro....",
+              "...offwwwwffo...",
+              "..oofffwwfffoo..",
+              "..o.cccccccc.o..",
+              "....cwwwwwwc....",
+              "....cccccccc....",
+              "................",
+              "................"
+            ],
+            [
+              "................",
+              "................",
+              "..oo........oo..",
+              ".offo......offo.",
+              ".offfoooooofffo.",
+              "..offffffffffo..",
+              "..ofofffffofoo..",
+              "..owwffooffwwo..",
+              "...oowwwwwwoo...",
+              "...oorrrrrroo...",
+              "..offfwwwwfffo..",
+              "..o.cccccccc.o..",
+              "....cwwccwwc....",
+              "....cccccccc....",
+              "................",
+              "................"
+            ]
+          ]
+        },
+        "stretching": {
+          "fps": 1.8,
+          "frames": [
+            [
+              "................",
+              ".........oo..oo.",
+              "........offooffo",
+              "....ooo.offffffo",
+              "...offfoofofofoo",
+              "..offffffwwoowwo",
+              ".oofffffffwwwwo.",
+              ".o.offffffrrrro.",
+              "....offfffoo....",
+              "....ofooofo.....",
+              "...ofo...ofo....",
+              "..oo......oo....",
+              "................",
+              "................",
+              "................",
+              "................"
+            ],
+            [
+              "..........p.....",
+              ".........oo..oo.",
+              ".....oo.offooffo",
+              "...offfooffffffo",
+              "..offffffofofooo",
+              ".offffffffwoowwo",
+              "oo.offffffwwwwo.",
+              "....offfffrrrro.",
+              ".....ofooofo....",
+              "....ofo...ofo...",
+              "...oo......oo...",
+              "................",
+              "................",
+              "................",
+              "................",
+              "................"
+            ]
+          ]
+        },
+        "napping": {
+          "fps": 1.2,
+          "frames": [
+            [
+              "...........zzz..",
+              "............z...",
+              "...........zzz..",
+              "................",
+              "................",
+              "...oo......oo...",
+              "..offoooooooffo.",
+              ".offffffffffffo.",
+              ".offooffffooffo.",
+              ".owwwffooffwwwo.",
+              ".oowwwwwwwwwwoo.",
+              "..oorrrrrrrroo..",
+              "...oooooooooo...",
+              "................",
+              "................",
+              "................"
+            ],
+            [
+              "..........zzz...",
+              "...........z....",
+              "..........zzz...",
+              ".............z..",
+              "................",
+              "................",
+              "...oo......oo...",
+              "..offoooooooffo.",
+              ".offffffffffffo.",
+              ".offooffffooffo.",
+              ".owwwffooffwwwo.",
+              ".oowwwwwwwwwwoo.",
+              "..oorrrrrrrroo..",
+              "...oooooooooo...",
+              "................",
+              "................"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "capybara",
+      "displayName": "Yuzu",
+      "species": "Capybara",
+      "accentHex": "#A98467",
+      "palette": {
+        ".": "transparent",
+        "o": "#2B2D42",
+        "f": "#A98467",
+        "d": "#7F5539",
+        "l": "#DDB892",
+        "y": "#FFBE0B",
+        "g": "#52B788",
+        "z": "#8ECAE6",
+        "c": "#A8DADC"
+      },
+      "states": {
+        "idle": {
+          "fps": 1.4,
+          "frames": [
+            [
+              ".......gg.......",
+              "......oyyo......",
+              "......oyyo......",
+              "...oo.oooo.oo...",
+              "..oddooooooodo..",
+              "..offffffffffo..",
+              "..ofofffffofoo..",
+              "..offffddffffo..",
+              "..offfddddfffo..",
+              "...offllllffo...",
+              "..offfllllfffo..",
+              "..offfffffffoo..",
+              "..offfffffffoo..",
+              "...oodo..odoo...",
+              "...ooo....ooo...",
+              "................"
+            ],
+            [
+              ".......gg.......",
+              "......oyyo......",
+              "......oyyo......",
+              "...oo.oooo.oo...",
+              "..oddooooooodo..",
+              "..offffffffffo..",
+              "..ooofffffoooo..",
+              "..offffddffffo..",
+              "..offfddddfffo..",
+              "...offllllffo...",
+              "..offfllllfffo..",
+              "..offfffffffoo..",
+              "..offfffffffoo..",
+              "...oodo..odoo...",
+              "...ooo....ooo...",
+              "................"
+            ]
+          ]
+        },
+        "focusing": {
+          "fps": 2.2,
+          "frames": [
+            [
+              ".......gg.......",
+              "......oyyo......",
+              "......oyyo......",
+              "...oo.oooo.oo...",
+              "..oddooooooodo..",
+              "..offffffffffo..",
+              "..ofofffffofoo..",
+              "..offfddddfffo..",
+              "...offllllffo...",
+              "..offfllllfffo..",
+              "..o.cccccccc.o..",
+              "....cllllllc....",
+              "....cccccccc....",
+              "................",
+              "................",
+              "................"
+            ],
+            [
+              "................",
+              ".......gg.......",
+              "......oyyo......",
+              "......oyyo......",
+              "...oo.oooo.oo...",
+              "..oddooooooodo..",
+              "..offffffffffo..",
+              "..ofofffffofoo..",
+              "..offfddddfffo..",
+              "..offfllllfffo..",
+              "..o.cccccccc.o..",
+              "....cllccllc....",
+              "....cccccccc....",
+              "................",
+              "................",
+              "................"
+            ]
+          ]
+        },
+        "stretching": {
+          "fps": 1.6,
+          "frames": [
+            [
+              "...........gg...",
+              "..........oyyo..",
+              "..........oyyo..",
+              "........oooooo..",
+              "...oooooffffffo.",
+              "..offffffofofoo.",
+              ".offffffffddddo.",
+              ".offffffffllllo.",
+              "..offfffffffoo..",
+              "...offoooooff...",
+              "...odo....odo...",
+              "..ooo......ooo..",
+              "................",
+              "................",
+              "................",
+              "................"
+            ],
+            [
+              "...........gg...",
+              "..........oyyo..",
+              "..........oyyo..",
+              "....oo..oooooo..",
+              "..offfooffffffo.",
+              ".offfffffofofoo.",
+              ".offffffffddddo.",
+              "..offfffffllllo.",
+              "...offffffffoo..",
+              "....odoooooodo..",
+              "...odo.....odo..",
+              "..ooo.......oo..",
+              "................",
+              "................",
+              "................",
+              "................"
+            ]
+          ]
+        },
+        "napping": {
+          "fps": 1.1,
+          "frames": [
+            [
+              "...........zzz..",
+              "......gg....z...",
+              ".....oyyo..zzz..",
+              ".....oyyo.......",
+              ".....oooo.......",
+              "..oooooooooooo..",
+              ".offffffffffffo.",
+              ".offooffffooffo.",
+              ".offffddddffffo.",
+              ".offfllllllfffo.",
+              ".offffffffffffo.",
+              "..oooooooooooo..",
+              "................",
+              "................",
+              "................",
+              "................"
+            ],
+            [
+              "..........zzz...",
+              "...........z....",
+              "......gg..zzz...",
+              ".....oyyo....z..",
+              ".....oyyo.......",
+              ".....oooo.......",
+              "..oooooooooooo..",
+              ".offffffffffffo.",
+              ".offooffffooffo.",
+              ".offffddddffffo.",
+              ".offfllllllfffo.",
+              ".offffffffffffo.",
+              "..oooooooooooo..",
+              "................",
+              "................",
+              "................"
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

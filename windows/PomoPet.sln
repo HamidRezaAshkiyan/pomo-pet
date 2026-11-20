@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomoPet.Core", "src\PomoPet.Core\PomoPet.Core.csproj", "{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomoPet.App", "src\PomoPet.App\PomoPet.App.csproj", "{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomoPet.PowerToys", "src\PomoPet.PowerToys\PomoPet.PowerToys.csproj", "{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomoPet.Core.Tests", "tests\PomoPet.Core.Tests\PomoPet.Core.Tests.csproj", "{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+		Debug|ARM64 = Debug|ARM64
+		Release|ARM64 = Release|ARM64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A01}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A01}.Debug|x64.Build.0 = Debug|Any CPU
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A01}.Release|x64.ActiveCfg = Release|Any CPU
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A01}.Release|x64.Build.0 = Release|Any CPU
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A02}.Debug|x64.ActiveCfg = Debug|x64
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A02}.Debug|x64.Build.0 = Debug|x64
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A02}.Release|x64.ActiveCfg = Release|x64
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A02}.Release|x64.Build.0 = Release|x64
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A03}.Debug|x64.ActiveCfg = Debug|x64
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A03}.Debug|x64.Build.0 = Debug|x64
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A03}.Release|x64.ActiveCfg = Release|x64
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A03}.Release|x64.Build.0 = Release|x64
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A04}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A04}.Debug|x64.Build.0 = Debug|Any CPU
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A04}.Release|x64.ActiveCfg = Release|Any CPU
+		{B4C4F4A2-7D1B-4C7A-9F28-1C2D3E4F5A04}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
