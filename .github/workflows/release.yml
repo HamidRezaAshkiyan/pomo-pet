@@ -53,8 +53,9 @@ jobs:
           Compress-Archive -Path dist/PomoPet-Windows-x64/* -DestinationPath dist/PomoPet-Windows-x64.zip -Force
           Compress-Archive -Path dist/PomoPet-PowerToys-x64/* -DestinationPath dist/PomoPet-PowerToys-x64.zip -Force
       - name: Upload Windows Release Assets
+        shell: pwsh
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG_NAME: ${{ inputs.tag || github.ref_name }}
         run: |
-          gh release upload "$TAG_NAME" dist/PomoPet-Windows-x64.zip dist/PomoPet-PowerToys-x64.zip --clobber
+          gh release upload "$env:TAG_NAME" dist/PomoPet-Windows-x64.zip dist/PomoPet-PowerToys-x64.zip --clobber
