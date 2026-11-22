@@ -28,6 +28,12 @@ public sealed partial class MainWindow : Window
         var appWindow = AppWindow.GetFromWindowId(windowId);
         appWindow.Resize(new SizeInt32(400, 480));
         ExtendsContentIntoTitleBar = true;
+
+        var version = typeof(MainWindow).Assembly.GetName().Version;
+        if (version is not null)
+        {
+            VersionText.Text = $"v{version.Major}.{version.Minor}.{version.Build}";
+        }
     }
 
     public void RefreshUi(int animTick)

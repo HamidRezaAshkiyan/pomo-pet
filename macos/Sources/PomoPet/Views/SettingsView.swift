@@ -5,6 +5,10 @@ struct SettingsView: View {
     @ObservedObject var engine: PomodoroEngine
     @Binding var isPresented: Bool
 
+    private var appVersion: String {
+        (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? "1.1.1"
+    }
+
     var body: some View {
         VStack(spacing: 14) {
             HStack {
@@ -46,6 +50,17 @@ struct SettingsView: View {
                     Toggle("Show timer in menu bar", isOn: $engine.settings.showTimerInMenuBar)
                     Toggle("Play sound chime", isOn: $engine.settings.playSoundChime)
                     Toggle("Auto-start focus after break", isOn: $engine.settings.autoStartNextPhase)
+
+                    Divider().padding(.vertical, 2)
+
+                    HStack {
+                        Text("Version")
+                            .foregroundStyle(.secondary)
+                        Spacer()
+                        Text("PomoPet v\(appVersion)")
+                            .font(.system(size: 11.5, weight: .medium, design: .monospaced))
+                            .foregroundStyle(.secondary)
+                    }
                 }
                 .font(.system(size: 12.5, design: .rounded))
                 .toggleStyle(.switch)

@@ -58,8 +58,14 @@
 
         <!-- Pet Switcher -->
         <StackPanel Grid.Row="3" Spacing="8">
-            <TextBlock Text="Companion" FontSize="12" FontWeight="SemiBold"
-                       Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            <Grid>
+                <TextBlock Text="Companion" FontSize="12" FontWeight="SemiBold"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           HorizontalAlignment="Left" />
+                <TextBlock x:Name="VersionText" Text="v1.1.1" FontSize="11"
+                           Foreground="{ThemeResource TextFillColorTertiaryBrush}"
+                           HorizontalAlignment="Right" />
+            </Grid>
             <Grid ColumnSpacing="8">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
